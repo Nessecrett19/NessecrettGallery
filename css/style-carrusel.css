@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0; padding: 0;
+    background-color: #ffffff;
+    color: #323337;
+    overflow-x: hidden;
+  }
+
+  .header {
+    background-image: linear-gradient(
+        rgba(158, 54, 137, 0.7),
+        rgba(75, 21, 51, 0.7)),
+        url(../images/jbaku.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    width: 100%;  /* Cambiado para no usar max-width aquí */
+    height: auto;
+    align-items: center;
+    padding: 0 15px; /* Para no tocar bordes */
+}
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  
+}
+.logo {
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navBar ul {
+    display: flex; /* Flexbox para menú horizontal */
+    padding: 0;
+    margin: 0;
+}
+
+.menu .navBar ul li {
+    margin-left: 20px;
+    float: none; /* Eliminar float para evitar problemas */
+}
+
+.menu .navBar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fffdfc;
+    display: block;
+    font-weight: 600;
+    white-space: nowrap; /* Evita que los enlaces se rompan */
+}
+
+.menu .navBar ul li a:hover {
+    color: rgb(228, 116, 208);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    word-break: break-word; /* Permite saltos de línea para evitar overflow */
+}
+
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Padding lateral para evitar que el contenido toque bordes */
+}
+
+  h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #8e084d;
+    font-weight: 800;
+  }
+
+  p.section-text {
+    font-size: 16px;
+    max-width: 800px;
+    color: #1e1e20;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  /* Carrusel base */
+  .carousel {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  .carousel-images {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-images img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
+  }
+
+  /* Botones */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(126, 13, 81, 0.498);
+    border: none;
+    color: #fff;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 5px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+  }
+
+  .carousel-button:hover {
+    background-color: rgb(57, 3, 44);
+  }
+
+  /* Flashcards dentro del carrusel */
+.flashcards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 991px;
+  margin: auto;
+  padding: 20px;
+}
+
+.flashcard {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flashcard:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background-color: #f6f6f6;
+  color: #323337;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Ajuste de las imágenes para que encajen */
+  
+
+  .prev-btn {
+    left: 15px;
+  }
+
+  .next-btn {
+    right: 15px;
+  }
+
+
+  .footer {
+    padding: 20px 0;
+    background-color: rgb(157, 0, 134);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.link {
+    flex: 1 1 200px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+
+.link a {
+    font-size: 16px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navBar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2e051c;
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu .navBar ul {
+        flex-direction: column;
+    }
+
+    .menu .navBar ul li {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    #menu:checked ~ .navBar {
+        display: flex;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding: 30px 15px 0;
+    }
+
+    .header-content {
+        padding: 50px 15px 50px;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+
+    .header-content p {
+        padding: 0;
+        max-width: 100%;
+    }
+    .carousel-images img {
+      max-width: 100%;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .carousel-button {
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+
+    .card-inner {
+    height: 200px;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link {
+        margin-bottom: 15px;
+    }
+  }

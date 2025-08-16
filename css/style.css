@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Padding lateral para evitar que el contenido toque bordes */
+}
+
+.header {
+    background-image: linear-gradient(
+        rgba(75, 26, 65, 0.7),
+        rgba(0, 0, 0, 0.7)),
+        url(../images/sakura1.jpeg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    width: 100%;  /* Cambiado para no usar max-width aquí */
+    height: auto;
+    align-items: center;
+    padding: 0 15px; /* Para no tocar bordes */
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.logo {
+    color: #fffdfc;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navBar ul {
+    display: flex; /* Flexbox para menú horizontal */
+    padding: 0;
+    margin: 0;
+}
+
+.menu .navBar ul li {
+    margin-left: 20px;
+    float: none; /* Eliminar float para evitar problemas */
+}
+
+.menu .navBar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fffdfc;
+    display: block;
+    font-weight: 600;
+    white-space: nowrap; /* Evita que los enlaces se rompan */
+}
+
+.menu .navBar ul li a:hover {
+    color: rgb(228, 116, 208);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    word-break: break-word; /* Permite saltos de línea para evitar overflow */
+}
+
+.header-content p {
+    font-size: 16px;
+    color: #f4f1f1;
+    max-width: 800px;
+    margin: 0 auto 25px;
+    padding: 0 5%;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: rgb(126, 13, 81);
+    color: rgb(255, 253, 254);
+    text-transform: uppercase;
+}
+
+.btn-1:hover {
+    background-color: rgb(57, 3, 44);
+}
+
+.nessecrett {
+    padding: 100px 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.nessecrett-content {
+    text-align: center;
+}
+
+.nessecrett-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    max-width: 900px;
+    margin: 0 auto 15px;
+    padding: 0 5%;
+}
+
+.txt-p {
+    font-size: 16px;
+    color: #313236;
+    max-width: 800px;
+    margin: 0 auto 35px;
+    padding: 0 5%;
+}
+
+.nessecrett-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Permite que los items bajen de línea en pantallas pequeñas */
+}
+
+.nessecrett-1 {
+    padding: 0 15px;
+    flex: 1 1 250px; /* Flex-grow, flex-shrink, base width para responsividad */
+    box-sizing: border-box;
+    max-width: 33%;
+}
+
+.nessecrett-1 img {
+    width: 25%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.nessecrett-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    max-width: 40vw;
+}
+
+.nessecrett-1 h3 {
+    color: #242427;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.services {
+    background-image: linear-gradient(
+        rgba(127, 49, 132, 0.879),
+        rgba(0, 0, 0, 0.868)),
+        url(../images/jbaku.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.services-content {
+    text-align: center;
+}
+
+.services-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #f4eeef;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5%;
+}
+
+.services-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Para que bajen en móvil */
+}
+
+.services-1 {
+    padding: 0 15px; /* Reducido de 100px a 15px */
+    flex: 1 1 250px;
+    box-sizing: border-box;
+    max-width: 33%;
+}
+
+.services-1 img {
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+.services-1 h3 {
+    color: #f6c8d7;
+    font-size: 18px;
+}
+
+.general {
+    display: flex;
+    flex-wrap: wrap; /* Para permitir responsividad */
+}
+
+.general-1 {
+    width: 50%;
+    max-width: 100%;
+    padding: 100px 8%;
+    background-color: #fff0f9;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.general-2 {
+    background-image: url(../images/tomoyo.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-3 {
+    background-image: url(../images/ninas.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+.blog {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.blog-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para que bajen en móvil */
+}
+
+.blog-1 {
+    padding: 15px 25px; /* Reducido padding para no generar overflow */
+    flex: 1 1 300px;
+    box-sizing: border-box;
+}
+
+.blog-1 img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+   
+}
+
+.blog-1 h3 {
+    font-size: 25px;
+    color: #323337;
+}
+
+.footer {
+    padding: 20px 0;
+    background-color: rgb(157, 0, 134);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.link {
+    flex: 1 1 200px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.link h3 {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+
+.link a {
+    font-size: 16px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navBar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu .navBar ul {
+        flex-direction: column;
+    }
+
+    .menu .navBar ul li {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #menu:checked ~ .navBar {
+        display: flex;
+    }
+
+    .header {
+        min-height: 0vh;
+        padding: 30px 15px 0;
+    }
+
+    .header-content {
+        padding: 50px 15px 50px;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+
+    .header-content p {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .nessecrett {
+        padding: 30px 15px;
+    }
+
+    .nessecrett-content h2 {
+        padding: 0;
+        font-size: 30px;
+        line-height: 36px;
+        max-width: 100%;
+    }
+
+    .txt-p {
+        padding: 0;
+    }
+
+    .nessecrett-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .nessecrett-1 {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+    .nessecrett-1 img {
+        max-width: 25%;
+        width: auto;
+        height: auto;
+    }
+
+    .nessecrett-img {
+        display: none !important;
+    }
+
+    .services {
+        padding: 30px 15px;
+    }
+
+    .services-content p {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .services-group {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .services-1 {
+        margin-bottom: 25px;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .general {
+        flex-direction: column;
+    }
+
+    .general-1 {
+        width: 100%;
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .general-2,
+    .general-3 {
+        display: none;
+    }
+
+    .blog {
+        padding: 30px 15px;
+    }
+
+    .blog-content {
+        flex-direction: column;
+    }
+
+    .blog-1 {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .blog-1 img {
+        max-width: 50%;
+        width: auto;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .link {
+        margin-bottom: 15px;
+    }
+}
