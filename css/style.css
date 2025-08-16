@@ -315,6 +315,14 @@ p {
    
 }
 
+.blog-1 iframe {
+    width: 100%;
+    max-width:560px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+   
+}
+
 .blog-1 h3 {
     font-size: 25px;
     color: #323337;
